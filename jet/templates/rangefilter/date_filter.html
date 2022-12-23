@@ -1,5 +1,27 @@
 {% load i18n %}
 <h3>{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}</h3>
+<style>
+.admindatefilter .changelist-filter-popup-content{
+  min-width: 305px;
+  padding: 1rem;
+}
+.admindatefilter fieldset.module{
+  padding: 0!important;
+}
+.admindatefilter .form-row{
+  padding: 0.3rem 0!important;
+}
+.admindatefilter .controls{
+  display: flex;
+  justify-content: flex-end;
+}
+.admindatefilter input[type='reset'] {
+  margin-left: 0.3rem;
+}
+.admindatefilter .form-row p {
+  padding: 0 !important;
+}
+</style>
 <script>
     function datefilter_apply(event, qs_name, form_name){
         event.preventDefault();
